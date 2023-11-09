@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+<robot name='android'>
+    <link name="base_footprint"/>
+    <joint name="footprint_to_base" type="fixed">
+        <parent link="base_footprint"/>
+        <child link="base_link"/>
+        <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
+    <link name="base_link"/>
+    
+    
+    <joint name="base_to_camera" type="fixed">
+        <parent link="base_link"/>
+        <child link="android_camera"/>
+        <origin xyz="0.225 0.0 0.3" rpy="0.0 0.0 0.0"/>
+    </joint>
+    
+    
+    <link name="android_camera">
+        <visual name='android_camera'>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.01 0.145 0.07"/>
+            </geometry>
+            <material>
+                <color rgba="1.0 0.0 0.0 1.0"/>
+            </material>
+        </visual>
+        <collision>
+            <origin xyz="0.0 0.0 0.0" rpy="0.0 0.0 0.0"/>
+            <geometry>
+                <box size="0.01 0.145 0.07"/>
+            </geometry>
+        </collision>
+    </link>
+
+</robot>
