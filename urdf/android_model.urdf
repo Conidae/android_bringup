@@ -13,7 +13,7 @@
     <joint name="base_to_camera" type="fixed">
         <parent link="base_link"/>
         <child link="android_camera"/>
-        <origin xyz="0.225 0.0 0.3" rpy="0.0 0.0 0.0"/>
+        <origin xyz="0.225 0.0 0.6" rpy="0.0 0.0 0.0"/>
     </joint>
     
     
